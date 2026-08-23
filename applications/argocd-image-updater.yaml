@@ -9,14 +9,14 @@ spec:
   project: default
 
   sources:
-    - repoURL: git@github.com:ilbertii/infra.git
+    - repoURL: git@github.com:Ilbertii/infra.git
       targetRevision: main
       path: apps/argocd-image-updater/helm
       helm:
         valueFiles:
           - values.yaml
           - custom-values.yaml
-    - repoURL: git@github.com:ilbertii/infra.git
+    - repoURL: git@github.com:Ilbertii/infra.git
       targetRevision: main
       path: apps/argocd-image-updater/extra
       directory:
