@@ -1,0 +1,19 @@
+namespace: backend
+
+deployment:
+  replicas: 3
+  image:
+    repository: docker.io/ilberti/backend
+    tag: "1.28.1"
+  containerPort: 80
+
+imagePullSecrets:
+  create: true
+  registry: "docker.io"
+  username: "ilberti"
+  password: "dckr_pat_IYD3BIzzrIzdiRL57gtakb-KzYM"
+
+service:
+  type: ClusterIP
+  port: 8080
+  targetPort: 80
