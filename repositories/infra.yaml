@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: argocd-infra-repository
+  namespace: argocd
+  labels:
+    argocd.argoproj.io/secret-type: repository
+stringData:
+  type: git
+  name: infra
+  project: default
+  url: git@github.com:Ilbertii/infra.git
+  sshPrivateKey: |
+    -----BEGIN OPENSSH PRIVATE KEY-----
+    ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBNdJ1LlgKv7OW8qLllKeWHjjG9bCBGXQIBnCPegmSzcIJ6cqAklxVCDD/UYZkGcpXcuycbzmkkWSsnpSq3zIYgw= 
+    -----END OPENSSH PRIVATE KEY-----
+
